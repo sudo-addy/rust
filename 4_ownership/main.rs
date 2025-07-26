@@ -26,5 +26,23 @@ let x = 5;
     let a = String::from("Hi");
     let b = a; // a is now invalid, ownership moved to b'
 
-    
+// Clone(copying the owneership )
+
+let s1 = String::from("Data");
+let s2 = s1.clone(); // Now both own separate memory
+
+
+
  }
+
+ fn take_ownership(s: String) {
+    println!("{}", s);
+} // s is dropped here
+
+fn host() {
+    let msg = String::from("Rust is safe");
+    take_ownership(msg); // Ownership moved
+    // println!("{}", msg); ❌ Error
+}
+
+

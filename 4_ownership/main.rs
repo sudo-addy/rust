@@ -42,7 +42,7 @@ let s2 = s1.clone(); // Now both own separate memory
 fn host() {
     let msg = String::from("Rust is safe");
     take_ownership(msg); // Ownership moved
-    // println!("{}", msg); ❌ Error
+    // println!("{}", msg);  Error
 }
 
 

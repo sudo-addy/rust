@@ -28,8 +28,9 @@ println!("{}", r);
  => In above code r is the refence which borrow value from the x
 
 **Q3. Explain the difference between `let x = 10;` and `let ref x = 10;`?**
- => Here the x store the value in the stack and it has orignal value 
- => In second on ref x it is pointing towrd the memory allockation or the borrowed value 
+ =>let x = 10; creates an i32 value on the stack.
+ =>let ref x = 10; also creates x on the stack, but x is a reference to that value.
+ =>So it's equivalent to: let x = &10;
 
 ## Section 2: Mutable References
 **Q4. Identify the error in this code:**
@@ -58,7 +59,7 @@ let s = String::from("abcdef");
 let slice = &s[1..4];
 println!("{}", slice);
 ```
-=>bcde
+=>bcd
 
 **Q7. True or False: A slice can outlive the data it refers to.** => False idk but as i know teh slice is the function whihc is used to show the data without taking the ownership 
 
@@ -68,7 +69,7 @@ println!("{}", slice);
 - c) `let s: String = "hello";`
 - d) `let s: String = "hello".to_string();`
 
-=>a
+=>a & d
 ## Section 4: String Operations
 **Q9. What's the output?**
 ```rust
@@ -94,8 +95,8 @@ fn main() {
 ```rust
 =>fn main() {
     let mut s = String::from("hello");
-    let slice = &s[0..2];
     s.push_str(" world");
+    let slice = &s[0..2];
     println!("{}", slice);
 }
 ```
@@ -107,11 +108,22 @@ let s1 = String::from("hello");
 let s2 = s1;
 println!("{}", s1);
 ```
+=> This is not valid, Beacure of the ownership transfer we are transerting the ownership of the s1 ro the s2
+
 
 ## Section 6: Theory Questions
 1. Why does Rust restrict having multiple mutable references?
+ => To preven the data races at the compile time ,rust ensure that only one peice of code will run at one time 
+
 2. When would you prefer using a slice instead of passing the whole object?
-3. What's the difference between `&String` and `&str`?
+ => I will do this only when i need to accest the data without taking the ownership 
+
+3. What's the difference between `&String` and `&str`?&
+ => the string has all the data assing to it 
+ => str is use to display teh data of it 
+
 4. Can you mutate data through a reference? Under what conditions?
+=> Yes, but only when the varible is mutable like mut y if it is immutable i can mutate it 
+
 
 

@@ -25,6 +25,9 @@
 > Stack memory is limited (MB), heap memory can be larger (GB)
 > Stack memory is freed when function ends, heap memory persists until explicitly freed
 
+# Scope
+> In rust scope is the block of code where one varible is valid
+> After the block of code the block of code become unusable like the out of the scope
 
 # questions 
 ✅ Q1: What is ownership in Rust and why is it important?

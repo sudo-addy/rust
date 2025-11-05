@@ -1,0 +1,1 @@
+C:\Users\Abhi\OneDrive\Desktop\language\rust\The_rust_book\1_Getting\ started\hello_cargo\target\debug\hello_cargo.exe: C:\Users\Abhi\OneDrive\Desktop\language\rust\The_rust_book\1_Getting\ started\hello_cargo\src\main.rs

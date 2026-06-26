@@ -19,7 +19,7 @@ fn main() {
 // 2. Memory is automatically freed here (s is "dropped")
 
 
-// Stack vs heap memory
+// Stack vs heap 
 let x = 5;
     let y = x; // x is still usable because integers are Copy types
 

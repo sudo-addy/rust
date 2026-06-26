@@ -45,3 +45,4 @@ fn host() {
     // println!("{}", msg);  Error
 }
 
+let namm = String::from("abhi"); 

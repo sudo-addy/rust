@@ -19,7 +19,7 @@ fn main() {
 // 2. Memory is automatically freed here (s is "dropped")
 
 
-// Stack vs heap 
+// Stack vs heap memory
 let x = 5;
     let y = x; // x is still usable because integers are Copy types
 
@@ -45,4 +45,4 @@ fn host() {
     // println!("{}", msg);  Error
 }
 
-let namm = String::from("abhi"); 
+let namm = String::from("abhi"); hey this ik
